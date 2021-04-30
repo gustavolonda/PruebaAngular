@@ -1,0 +1,32 @@
+<p>firts-formulary works!</p>
+<p>Name</p>
+<input type="text" name="name" id="name" [value]="defaultName">
+<p>{{user}}</p>
+<input [(ngModel)]="user" type="text" >
+<hr>
+<p>Email</p>
+<input #email type="text" name="email" id="email">
+<hr>
+<button (click)="OnSendForm(email)">Send Form</button>
+<hr>
+<button (click)="OnDefaultForm()">Default Form</button>
+<p>{{status}}</p>
+<div *ngIf = "displayPassword; then showPassword; else hidePassword"></div>
+<ng-template #showPassword>
+    <p>123456</p>
+</ng-template>
+<ng-template #hidePassword>
+    <p>No mostrar el password</p>
+</ng-template>
+
+<div [ngSwitch]="lightStatus">
+    <div *ngSwitchCase="'GREEN'">VERDE</div>
+    <div *ngSwitchCase="'RED'">ROJO</div>
+    <div *ngSwitchCase="'YELLOW'">AMARRILLO</div>
+    <div *ngSwitchDefault>FALLO</div>
+</div>
+<div *ngFor="let nombre of names">
+    <p>{{nombre}}</p>
+</div>
+<p>{{messageFromParent}}</p>
+<button (click)="OnSendEvent()">Enviar Evento</button>
