@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FirtsFormularyComponent } from './firts-formulary/firts-formulary.component';
 import {FormsModule} from "@angular/forms"
 import { CourseService } from './course.service';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +13,8 @@ import { CourseService } from './course.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
