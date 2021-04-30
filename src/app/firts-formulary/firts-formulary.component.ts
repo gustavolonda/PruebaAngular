@@ -17,10 +17,12 @@ courses = []
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.courses = this.courseService.getCourses()
-    console.log(this.courses)
+    //this.courses = this.courseService.getCourses()
+    //console.log(this.courses)
+    this.courseService.getCourses().subscribe(data=>this.courses=data)
   }
   OnSendForm(email) {
+    console.log(this.courses)
     this.status= "El formulario ha sido envido " +email.value
   }
   OnDefaultForm() {
