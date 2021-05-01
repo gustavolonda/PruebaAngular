@@ -7,9 +7,9 @@
 <p>Email</p>
 <input #email type="text" name="email" id="email">
 <hr>
-<button (click)="OnSendForm(email)">Send Form</button>
+<button mat-button color="primary" (click)="OnSendForm(email)">Send Form</button>
 <hr>
-<button (click)="OnDefaultForm()">Default Form</button>
+<button mat-raised-button color="primary" (click)="OnDefaultForm()">Default Form</button>
 <p>{{status}}</p>
 <div *ngIf = "displayPassword; then showPassword; else hidePassword"></div>
 <ng-template #showPassword>

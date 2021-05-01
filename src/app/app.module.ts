@@ -6,6 +6,8 @@ import { FirtsFormularyComponent } from './firts-formulary/firts-formulary.compo
 import {FormsModule} from "@angular/forms"
 import { CourseService } from './course.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
