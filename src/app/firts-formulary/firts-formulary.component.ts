@@ -14,12 +14,14 @@ displayPassword = false
 lightStatus = "GREEN"
 names = ['Alberto','Marta', 'Maria', 'Marcos']
 courses = []
+errorMessage = ""
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
     //this.courses = this.courseService.getCourses()
     //console.log(this.courses)
-    this.courseService.getCourses().subscribe(data=>this.courses=data)
+    this.courseService.getCourses().subscribe(data=>this.courses=data,
+                                              error=> this.errorMessage=error)
   }
   OnSendForm(email) {
     console.log(this.courses)
